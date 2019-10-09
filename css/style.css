@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+
+*, *::after, *::before{ 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #0D0D0D;
+	font-family: 'Abel', sans-serif;
+	overflow: hidden;
+}
+
+/* Header */
+
+.pre{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    color: rgb(255, 255, 255);
+}
+
+.fav{
+    position: absolute;
+    z-index: 20;
+    display: block;
+    width: 37rem;
+    top: 4.6875rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+}
+
+.logo{
+	display: block;
+	width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.art{
+	display: block;
+	width: 100%;
+    height: auto;
+}
+
+/* Navigation Bar */
+
+nav{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-top: 1rem;
+}
+
+.bar ul{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	list-style: none;
+}
+
+.bar ul li{
+	position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 5px 50px;
+}
+
+.bar ul li a{
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    padding: 0px 0px 0.5rem;
+}
+
+.bar ul li a:hover{
+	color: #ab6be8;
+}
+
+a{
+	text-decoration: none;
+}
+
+/* Section */
+
+section{
+	height: 100vh;
+}
+
+/* Footer */
+
+footer{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+footer p{
+	color: #fff;
+	text-align: center;
+}
+
+/* Footer Social Links */
+
+.links{
+    display: flex;
+    left: 0;
+    right: 0;
+    margin-bottom: 1rem;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+}
+
+.links a{
+	display: inline-block;
+	margin: 0 1.5em 0;
+	pointer-events: auto;
+}
+
+footer .fa{
+	color: #fff;
+}
+
+footer .fa:hover{
+	color: #d98fff;
+}
+
+.flux{
+	position: relative;
+    display: flex;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 50em){
+    .fav{
+        width: 30rem;
+        top: 7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .bar ul li{
+        margin: 5px 25px;
+    }
+}
