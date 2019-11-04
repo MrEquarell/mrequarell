@@ -13,7 +13,57 @@ body{
 	overflow: hidden;
 }
 
-/* Header */
+/* Navigation Bar */
+
+nav{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-top: 1rem;
+}
+
+.bar ul{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	list-style: none;
+}
+
+.bar ul li{
+	position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 5px 50px;
+}
+
+.bar ul li a{
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    padding: 0px 0px 0.5rem;
+}
+
+.bar ul li a:hover{
+	color: #ab6be8;
+}
+
+a{
+	text-decoration: none;
+}
+
+/* Main */
 
 .pre{
 	position: absolute;
@@ -76,56 +126,6 @@ body{
     border-radius: 5px;
 }
 
-/* Navigation Bar */
-
-nav{
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	margin-top: 1rem;
-}
-
-.bar ul{
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	-webkit-box-pack: center;
-	justify-content: center;
-	list-style: none;
-}
-
-.bar ul li{
-	position: relative;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    margin: 5px 50px;
-}
-
-.bar ul li a{
-    position: relative;
-    display: block;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 14px;
-    color: #fff;
-    letter-spacing: 0.5px;
-    padding: 0px 0px 0.5rem;
-}
-
-.bar ul li a:hover{
-	color: #ab6be8;
-}
-
-a{
-	text-decoration: none;
-}
-
 /* Section */
 
 section{
@@ -184,11 +184,33 @@ footer .fa:hover{
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width: 90em){
+    .floating{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icons{
+        width: 55px;
+        height: 55px;
+    }
+}
+
 @media screen and (max-width: 50em){
     .fav{
         width: 30rem;
         top: 7rem;
         margin-bottom: 0.5rem;
+    }
+
+    .floating{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icons{
+        width: 50px;
+        height: 50px;
     }
 
     .bar ul li{
