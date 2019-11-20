@@ -79,7 +79,7 @@ section .screen:nth-child(4):hover{
 }
 
 section .screen:nth-child(5){
-    background: url(../img/05-breathe.jpg);
+    background: url(../img/05-sasha.jpg);
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
