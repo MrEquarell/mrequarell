@@ -34,6 +34,8 @@ section .screen:hover{
     opacity: 1;
 }
 
+/* Artwork View */
+
 section .screen:nth-child(1){
     background: url(../img/01-rxmance.jpg);
     background-size: 90%;
@@ -100,6 +102,8 @@ section .screen:nth-child(6):hover{
     background-size: cover;
 }
 
+/* Artwork Description */
+
 section .screen .content{
     position: absolute;
     width: 400px;
@@ -140,14 +144,6 @@ section .screen .content a:hover{
     color: #ab6be8;
     text-decoration: none;
     transition: 0.5s;;
-}
-
-/* Particles */
-
-#particles-js{
-    position: absolute;
-    width: 400px;
-    height: auto;
 }
 
 /* MEDIA QUERIES */
@@ -196,8 +192,8 @@ section .screen .content a:hover{
 
     section .screen .content{
         position: absolute;
-        width: 200px;
-        height: 200px;
+        width: 190px;
+        height: 190px;
     }
 
     section .screen:nth-child(1){
