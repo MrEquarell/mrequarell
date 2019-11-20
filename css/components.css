@@ -57,7 +57,7 @@ section .screen:nth-child(2):hover{
 }
 
 section .screen:nth-child(3){
-    background: url(../img/03-wotm.jpg);
+    background: url(../img/03-la-lune.jpg);
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
