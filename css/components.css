@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Limelight|Source+Sans+Pro:200,300,400,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900');
 
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Limelight', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* Section */
@@ -125,6 +125,7 @@ section .screen .content h2{
     margin: 0;
     padding: 0;
     text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 30px;
     color: #fff;
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Limelight|Source+Sans+Pro:200,300,400,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900');
 
 *, *::after, *::before{ 
 	-webkit-box-sizing: border-box; 
@@ -8,8 +8,8 @@
 body{
 	margin: 0;
 	padding: 0;
-	background-color: #0D0D0D;
-	font-family: 'Limelight', cursive;
+    background-color: #0D0D0D;
+    font-family: 'Source Sans Pro', sans-serif;
 	overflow: hidden;
 }
 
@@ -134,7 +134,8 @@ section{
 
 footer{
 	display: block;
-	position: absolute;
+    position: absolute;
+    width: 100%;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -216,7 +217,7 @@ footer .fa:hover{
         margin: 5px 25px;
     }
 
-    .bar ul li a, .about p{
+    .bar ul li a{
         font-size: 12px;
     }
 }
