@@ -50,8 +50,9 @@ nav{
     text-transform: uppercase;
     text-align: center;
     font-size: 14px;
+    font-weight: 600;
     color: #fff;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     padding: 0px 0px 0.5rem;
 }
 
