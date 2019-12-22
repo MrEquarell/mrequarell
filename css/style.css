@@ -99,6 +99,18 @@ a{
     margin-bottom: 1.5rem;
 }
 
+.poster{
+    position: absolute;
+    z-index: 20;
+    display: block;
+    width: 35rem;
+    height: auto;
+    top: 4.6875rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+}
+
 .floating{
     position: absolute;
     display: block;
@@ -116,7 +128,6 @@ a{
 	display: block;
 	width: 100%;
     height: auto;
-    border-radius: 50%;
 }
 
 .art{
@@ -212,6 +223,10 @@ footer .fa:hover{
         width: 55px;
         height: 55px;
     }
+
+    footer h2{
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 50em){
@@ -236,6 +251,10 @@ footer .fa:hover{
     }
 
     .bar ul li a{
+        font-size: 18px;
+    }
+
+    footer h2{
         font-size: 18px;
     }
 }
