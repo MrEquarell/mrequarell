@@ -1,260 +1,712 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900');
-
 @font-face{
 	font-weight: normal;
 	font-style: normal;
-	font-family: 'Landasans Regular';
-	src:url('../fonts/Landasans Regular.ttf');
-	src:url('../fonts/Landasans Regular.ttf') format('truetype'),
+	font-family: 'Rosmatika';
+	src:url('../font/Rosmatika.ttf');
+	src:url('../font/Rosmatika.ttf') format('truetype'),
 }
 
+/* --- Main --- */
 
-*, *::after, *::before{ 
-	-webkit-box-sizing: border-box; 
-	box-sizing: border-box; 
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    background: #b4f7ff !important;
+    color: #fff !important;
 }
 
-body{
-	margin: 0;
-	padding: 0;
-    background-color: #b4f7ff;
-    font-family: 'Landasans Regular';
-	overflow: hidden;
+.whitespace{
+    width: 100%;
+    height: 100px;
 }
 
-/* Navigation Bar */
+/* --- TypeScript Effect --- */
 
-nav{
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	margin-top: 1rem;
-}
-
-.bar ul{
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	-webkit-box-pack: center;
-	justify-content: center;
-	list-style: none;
-}
-
-.bar ul li{
-	position: relative;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    margin: 5px 25px;
-}
-
-.bar ul li a{
-    position: relative;
-    display: block;
+.line{
+    width: 24em;
+    top: 50;
+    margin: auto;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
     text-align: center;
-    font-size: 20px;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: 1px;
-    padding: 0px 0px 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
 }
 
-.bar ul li a:hover{
-    color: #f9bfd7;
+.anim-typewriter{
+    animation: typewriter 4s steps(40) 1s normal both,
+    blinkTextCussor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter{
+    from{
+        width: 0;
+    }
+    to{
+        width: 18em;
+    }
+}
+
+@keyframes blinkTextCussor{
+    from{
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+
+/* --- Nav --- */
+
+nav {
+    width: 100%;
+    background: #b4f7ff;
+    height: 80px;
+    position: fixed;
+    z-index: 1;
+}
+
+nav #brand{
+    float: left;
+    display: block;
+    margin-left: 82px;
+    line-height: 80px;
+    font-weight: bold;
+}
+
+nav #brand a{
+    color: #fff;
+    transition: all 0.3s ease-out;
+}
+
+nav #brand a:hover{
+    text-decoration: none;
+}
+
+nav #menu{
+    float: left;
+    right: 80px;
+    position: fixed;
+}
+
+nav #menu li{
+    padding-left: 40px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 80px;
+    position: relative;
+    transition: all 0.3s ease-out;
+}
+
+nav #menu li a{
+    color: #fff;
+}
+
+nav #menu li a:hover{
+    text-decoration: none;
+    color: #f7d7e2;
     transition: 0.5s;
 }
 
-a{
-	text-decoration: none;
+#toggle {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-weight: 700;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    float: right;
+    transition: all 0.3s ease-out;
+    visibility: hidden;
+    opacity: 0;
 }
 
-/* Main */
+/* --- Responsive Nav --- */
 
-.pre{
-	position: absolute;
+.close-btn{
+    position: absolute;
+    right: 16px;
+    font-weight: 600;
+    z-index: 2;
+    cursor: pointer;
+    top: -2px;
+    line-height: 80px;
+}
+
+#resize {
+    z-index: 1;
+    top: 0px;
+    position: fixed;
+    background: #b4f7ff;
     width: 100%;
-    height: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    color: rgb(255, 255, 255);
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-out;
 }
 
-.fav{
+#resize #menu{
+    height: 90px;
     position: absolute;
-    z-index: 20;
+    left: 45%;
+    transform: translateX(-40%);
+    text-align: center;
+    display: table-cell;
+    vertical-align: center;
+}
+
+#resize #menu li{
     display: block;
-    width: 37rem;
-    top: 4.6875rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1.5rem;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 50px;
+    min-height: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
 }
 
-.poster{
-    position: absolute;
-    z-index: 20;
-    display: block;
-    width: 35rem;
-    height: auto;
-    top: 4.6875rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1.5rem;
+#resize li:nth-child(1){
+    margin-top: 140px;
 }
 
-.floating{
-    position: absolute;
-    display: block;
-    top: 22rem;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin: 0;
-    padding: 0;
-    z-index: 20;
-}
-
-/* Items */
-
-.logo{
-	display: block;
-	width: 100%;
-    height: auto;
-}
-
-.art{
-	display: block;
-	width: 100%;
-    height: auto;
-}
-
-.icons{
-    display: block;
-    float: left;
-    width: 70px;
-    height: 70px;
-    margin: 15px;
-    border-radius: 5px;
-}
-
-/* Section */
-
-section{
-	height: 100vh;
-}
-
-/* Footer */
-
-footer{
-	display: block;
-    position: absolute;
-    width: 100%;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-footer h2{
+#resize #menu li a{
     color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+#resize #menu li a:hover{
+    text-decoration: none;
+    color: #f7d7e2;
+    transition: 0.5s;
+}
+
+#resize.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* --- Self Section --- */
+
+.self{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.self h1{
     font-weight: 600;
     text-align: center;
+    letter-spacing: -2px;
+    line-height: 58px;
 }
 
-footer p{
-    color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+/* --- Animate Scroll Down --- */
+
+.scroll-down{
+    position: absolute;
+    left: 50%;
+    width: 13px;
+    height: 13px;
+    bottom: 100px;
+    display: block;
     text-align: center;
+    font-size: 20px;
+    z-index: 0;
+    text-decoration: none;
+    text-shadow: 0;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: translate(-50%, 0) rotate(45deg);
+    -webkit-transform: translate(-50%, 0) rotate(45deg);
+    animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
 }
 
+@keyframes fade_move_down{
+    0%{
+        transform: translate(0, -20px) rotate(45deg);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(0, 20px) rotate(45deg);
+        opacity: 0; 
+    }
+}
 
-/* Footer Social Links */
+/* --- Home Section --- */
 
-.links{
-    display: flex;
-    left: 0;
+h6{
+    text-align: center;
+    font-weight: 600 !important;
+}
+
+.vertical{
+    position: absolute;
+    margin-top: 40px;
+    border-left: 1px solid #fff;
+    height: 80px;
+    left: 50%;
+}
+
+.project{
+    height: 500px;
+}
+
+.project1{
+    background: url("../img/01-full-blxxd.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.project1::after {
+    content: "FULL BLXXD";
+    font-family: "Rosmatika";
+    font-size: 36px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 8%;
+    left: -60%;
     right: 0;
-    margin-bottom: 1rem;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
+    bottom: 0;
 }
 
-.links a{
-	display: inline-block;
-	margin: 0 1.5em 0;
-	pointer-events: auto;
+.project2{
+    background: url("../img/02-la-lune.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
 }
 
-footer .fa{
-	color: #fff;
+.project2::after {
+    content: "La Lune";
+    font-family: "Rosmatika";
+    font-size: 36px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 80%;
+    left: 90%;
+    right: 0;
+    bottom: 0;
 }
 
-footer .fa:hover{
-	color: #d98fff;
+.project3{
+    background: url("../img/03-sasha.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
 }
 
-.flux{
-	position: relative;
-    display: flex;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
+.project3::after {
+    content: "Sasha";
+    font-family: "Rosmatika";
+    font-size: 36px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 80%;
+    left: -50%;
+    right: 0;
+    bottom: 0;
 }
 
-/* MEDIA QUERIES */
+.project4{
+    background: url("../img/04-impala.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+}
 
-@media screen and (max-width: 90em){
-    .floating{
-        display: flex;
-        flex-direction: column;
+.project4::after {
+    content: "Impala";
+    font-family: "Rosmatika";
+    font-size: 36px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 10%;
+    left: 90%;
+    right: 0;
+    bottom: 0;
+}
+
+/* --- Work Section --- */
+
+.self-content{
+    margin-left: 0%;
+}
+
+.self-content h3{
+    font-weight: 600 !important;
+    text-align: left;
+}
+
+.self-content h6{
+    text-align: left;
+}
+
+.self-content p{
+    font-weight: 400 !important;
+    line-height: 36px;
+}
+
+.project5{
+    background: url("../img/05-ojcp.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.project5::after {
+    content: "Project Manager";
+    font-family: "Rosmatika";
+    font-size: 36px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 8%;
+    left: -80%;
+    right: 0;
+    bottom: 0;
+}
+
+.project6{
+    background: url("../img/06-wicked-tiger.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.project6::after {
+    content: "Wicked Tiger";
+    font-family: "Rosmatika";
+    font-size: 36px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 80%;
+    left: 90%;
+    right: 0;
+    bottom: 0;
+}
+
+.project7{
+    background: url("../img/07-teacher.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.project7::after {
+    content: "Freelance Teacher";
+    font-family: "Rosmatika";
+    font-size: 36px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 80%;
+    left: -80%;
+    right: 0;
+    bottom: 0;
+}
+
+.project8{
+    background: url("../img/08-croissant.png") no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.project8::after {
+    content: "Croissant de Lune";
+    font-family: "Rosmatika";
+    font-size: 36px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 10%;
+    left: 90%;
+    right: 0;
+    bottom: 0;
+}
+
+/* --- About Section --- */
+
+.about{
+    height: 500px;
+    margin-top: 120px;
+}
+
+.image{
+    background: url("../img/yo.gif") 50% 65%;
+}
+
+/* --- Contact Section ---*/
+
+.contact{
+    height: 500px;
+}
+
+.contact-view{
+    background: url("../img/kindness.jpg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.contact-view::after {
+    content: "Good Faith";
+    font-family: "Rosmatika";
+    font-size: 36px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 8%;
+    left: -60%;
+    right: 0;
+    bottom: 0;
+}
+
+/* --- Project Section --- */
+
+.project-content{
+    margin-left: 0%;
+}
+
+.project-content h3{
+    font-weight: 600 !important;
+    text-align: left;
+}
+
+.project-content h6{
+    text-align: left;
+}
+
+.project-content p{
+    font-weight: 400 !important;
+    line-height: 36px;
+}
+
+.particles{
+    background: #f7d7e2;
+}
+
+.project-info h6{
+    text-align: left;
+}
+
+.project-info p{
+    font-weight: 400 !important;
+    line-height: 36px;
+}
+
+/* --- Project 1 --- */
+
+.fluid1{
+    background: url(https://images.unsplash.com/photo-1561211974-8a2737b4dcac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) 60% 50%;
+}
+
+/* --- Project 2 --- */
+
+.fluid2{
+    background: url(https://images.unsplash.com/photo-1577138017060-8ed59846a432?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) 10% 70%;
+}
+
+/* --- Project 3 --- */
+
+.fluid3{
+    background: url(https://images.unsplash.com/photo-1564951415682-4466397f7707?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 10% 70%;
+}
+
+/* --- Project 4 --- */
+
+.fluid4{
+    background: url(https://images.unsplash.com/photo-1565638427888-268b7714225e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) 30% 50%;
+}
+
+/* --- Project 5 --- */
+
+.fluid5{
+    background: url(https://images.unsplash.com/photo-1563305145-b64e0c2184aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) 20% 30%;
+}
+
+/* --- Project 6 --- */
+
+.fluid6{
+    background: url(https://images.unsplash.com/photo-1571607050173-323d37e16af4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80) 20% 30%;
+}
+
+/* --- Project 7 --- */
+
+.fluid7{
+    background: url(https://images.unsplash.com/photo-1574281147884-113f7431528e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80) 20% 30%;
+}
+
+/* --- Project 8 --- */
+
+.fluid8{
+    background: url(https://images.unsplash.com/photo-1557264305-7e2764da873b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 20% 40%;
+}
+
+/* --- Footer --- */
+
+.collab{
+    text-align: right;
+}
+
+.collab p{
+    font-weight: 600 !important;
+    margin-bottom: 20px;
+}
+
+.hr{
+    background: rgba(255, 255, 255, 0.75);
+    height: 1px;
+}
+
+.info h4{
+    font-size: 18px;
+    font-weight: 400 !important;
+}
+
+.info p{
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 400 !important;
+}
+
+.info li{
+    font-weight: 400 !important;
+    color: #fff;
+    font-size: 18px;
+}
+
+#media, #address{
+    text-align: right;
+}
+
+#media ul{
+    list-style: none;
+}
+
+#media ul li{
+    display: inline-block;
+    margin: 5px;
+}
+
+#media ul li a{
+    cursor: pointer;
+    color: #fff;
+}
+
+#media ul li a:hover{
+    color: #f7d7e2;
+    transition: 0.5s;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media(max-width: 768px){
+    .whitespace{
+        display: none;
     }
 
-    .icons{
-        width: 55px;
-        height: 55px;
+    @keyframes typewriter{
+        from{
+            width: 0;
+        }
+        to{
+            width: 17em;
+        }
     }
 
-    footer h2{
-        font-size: 18px;
+    #toggle{
+        visibility: visible;
+        opacity: 1;
+        margin-top: 6px;
+        margin-right: 4px;
+    }
+
+    nav #brand{
+        margin-left: 24px;
+    }
+
+    #menu a{
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    nav #menu{
+        display: none;
+    }
+
+    .header h1{
+        font-size: 26px;
+    }
+
+    .project{
+        width: 90% !important;
+        margin: 14px auto;
+    }
+
+    .vertical {
+        display: none;
+    }
+
+    .project1::after, .project2::after, .project3::after, .project4::after, .project5::after, .project6::after, .project7::after, .project8::after{
+        display: none;
+    }
+
+    .collab, #personal, #media, #address{
+        text-align: center;
+    }
+
+    .info ul{
+        margin: 0 0 0 -22px;
+        padding: 0;
+    }
+
+    .self-content{
+        padding-top: 50px;
+        width: 96%;
+        margin: 0 auto;
+    }
+
+    /* .project-content h3{
+        text-align: center;
+    }
+
+    .project-content h6{
+        text-align: center;
+    }
+    
+    .project-content p{
+        text-align: center;
+        font-weight: 400 !important;
+        line-height: 36px;
+    } */
+
+    /* .project-info h6{
+        text-align: center;
+    }
+
+    .project-info p{
+        text-align: center;
+    } */
+
+    .contact{
+        width: 90% !important;
+        margin: 14px auto;
+    }
+
+    .contact-view::after{
+        display: none;
     }
 }
 
-@media screen and (max-width: 50em){
-    .fav{
-        width: 30rem;
-        top: 7rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .floating{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .icons{
-        width: 50px;
-        height: 50px;
-    }
-
-    .bar ul li{
-        margin: 5px 25px;
-    }
-
-    .bar ul li a{
-        font-size: 18px;
-    }
-
-    footer h2{
-        font-size: 18px;
+@media(min-width: 768px){
+    #resize{
+        visibility: hidden !important;
     }
 }
