@@ -14,8 +14,8 @@ html, body{
     width: 100%;
     height: 100%;
     font-family: 'Source Sans Pro', sans-serif !important;
-    background: #b4f7ff !important;
-    color: #fff !important;
+    background: #fff !important;
+    color: #0D0D0D !important;
 }
 
 .whitespace{
@@ -29,7 +29,7 @@ html, body{
     width: 24em;
     top: 50;
     margin: auto;
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    border-right: 2px solid #212121;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -52,7 +52,7 @@ html, body{
 
 @keyframes blinkTextCussor{
     from{
-        border-right-color: rgba(255, 255, 255, 0.75);
+        border-right-color: #212121;
     }
     to{
         border-right-color: transparent;
@@ -63,7 +63,7 @@ html, body{
 
 nav {
     width: 100%;
-    background: #b4f7ff;
+    background: #fff;
     height: 80px;
     position: fixed;
     z-index: 1;
@@ -78,7 +78,7 @@ nav #brand{
 }
 
 nav #brand a{
-    color: #fff;
+    color: #0D0D0D;
     transition: all 0.3s ease-out;
 }
 
@@ -103,7 +103,7 @@ nav #menu li{
 }
 
 nav #menu li a{
-    color: #fff;
+    color: #0D0D0D;
 }
 
 nav #menu li a:hover{
@@ -143,7 +143,7 @@ nav #menu li a:hover{
     z-index: 1;
     top: 0px;
     position: fixed;
-    background: #b4f7ff;
+    background: #fff;
     width: 100%;
     height: 100%;
     visibility: hidden;
@@ -177,7 +177,7 @@ nav #menu li a:hover{
 }
 
 #resize #menu li a{
-    color: #fff;
+    color: #0D0D0D;
     font-weight: 600;
 }
 
@@ -222,8 +222,8 @@ nav #menu li a:hover{
     z-index: 0;
     text-decoration: none;
     text-shadow: 0;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
+    border-bottom: 2px solid #0D0D0D;
+    border-right: 2px solid #0D0D0D;
     transform: translate(-50%, 0) rotate(45deg);
     -webkit-transform: translate(-50%, 0) rotate(45deg);
     animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
@@ -253,7 +253,7 @@ h6{
 .vertical{
     position: absolute;
     margin-top: 40px;
-    border-left: 1px solid #fff;
+    border-left: 1px solid #0D0D0D;
     height: 80px;
     left: 50%;
 }
@@ -273,7 +273,7 @@ h6{
     font-family: "Rosmatika";
     font-size: 36px;
     position: relative;
-    color: #fff;
+    color: #0D0D0D;
     display: block;
     top: 8%;
     left: -60%;
@@ -292,10 +292,10 @@ h6{
     font-family: "Rosmatika";
     font-size: 36px;
     position: relative;
-    color: #fff;
+    color: #0D0D0D;
     display: block;
     top: 80%;
-    left: 90%;
+    left: 110%;
     right: 0;
     bottom: 0;
 }
@@ -311,7 +311,7 @@ h6{
     font-family: "Rosmatika";
     font-size: 36px;
     position: relative;
-    color: #fff;
+    color: #0D0D0D;
     display: block;
     top: 80%;
     left: -50%;
@@ -330,10 +330,10 @@ h6{
     font-family: "Rosmatika";
     font-size: 36px;
     position: relative;
-    color: #fff;
+    color: #0D0D0D;
     display: block;
     top: 10%;
-    left: 90%;
+    left: 110%;
     right: 0;
     bottom: 0;
 }
@@ -369,7 +369,7 @@ h6{
     font-family: "Rosmatika";
     font-size: 36px;
     position: relative;
-    color: #fff;
+    color: #0D0D0D;
     display: block;
     top: 8%;
     left: -80%;
@@ -388,10 +388,10 @@ h6{
     font-family: "Rosmatika";
     font-size: 36px;
     position: relative;
-    color: #fff;
+    color: #0D0D0D;
     display: block;
     top: 80%;
-    left: 90%;
+    left: 110%;
     right: 0;
     bottom: 0;
 }
@@ -407,7 +407,7 @@ h6{
     font-family: "Rosmatika";
     font-size: 36px;
     position: relative;
-    color: #fff;
+    color: #0D0D0D;
     display: block;
     top: 80%;
     left: -80%;
@@ -426,10 +426,10 @@ h6{
     font-family: "Rosmatika";
     font-size: 36px;
     position: relative;
-    color: #fff;
+    color: #0D0D0D;
     display: block;
     top: 10%;
-    left: 90%;
+    left: 110%;
     right: 0;
     bottom: 0;
 }
@@ -461,7 +461,7 @@ h6{
     font-family: "Rosmatika";
     font-size: 36px;
     position: relative;
-    color: #fff;
+    color: #0D0D0D;
     display: block;
     top: 8%;
     left: -60%;
@@ -562,7 +562,7 @@ h6{
 }
 
 .hr{
-    background: rgba(255, 255, 255, 0.75);
+    background: #212121;
     height: 1px;
 }
 
@@ -572,13 +572,13 @@ h6{
 }
 
 .info p{
-    color: rgba(255, 255, 255, 0.75);
+    color: #212121;
     font-weight: 400 !important;
 }
 
 .info li{
     font-weight: 400 !important;
-    color: #fff;
+    color: #0D0D0D;
     font-size: 18px;
 }
 
@@ -597,7 +597,7 @@ h6{
 
 #media ul li a{
     cursor: pointer;
-    color: #fff;
+    color: #0D0D0D;
 }
 
 #media ul li a:hover{
