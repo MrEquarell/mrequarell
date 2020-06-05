@@ -1,10 +1,11 @@
 @font-face{
 	font-weight: normal;
 	font-style: normal;
-	font-family: 'Rosmatika';
-	src:url('../font/Rosmatika.ttf');
-	src:url('../font/Rosmatika.ttf') format('truetype'),
+	font-family: 'ASTERA';
+	src:url('../font/ASTERA.ttf');
+	src:url('../font/ASTERA.ttf') format('truetype'),
 }
+
 
 /* --- Main --- */
 
@@ -13,9 +14,11 @@ html, body{
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Source Sans Pro', sans-serif !important;
-    background: #fff !important;
-    color: #0D0D0D !important;
+    font-family: 'ASTERA' !important;
+    /* font-family: 'Source Sans Pro', sans-serif !important; */
+    letter-spacing: 0.5px;
+    background: #0D0D0D !important;
+    color: #00ff1d !important;
 }
 
 body::-webkit-scrollbar {
@@ -23,11 +26,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: #fff;
+    background: #0D0D0D;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #0D0D0D;
+    background: #00ff1d;
 }
 
 .whitespace{
@@ -41,7 +44,8 @@ body::-webkit-scrollbar-thumb {
     width: 24em;
     top: 50;
     margin: auto;
-    border-right: 2px solid #212121;
+    border-right: 2px solid #00ff1d;
+    letter-spacing: 0.5px !important;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -64,7 +68,7 @@ body::-webkit-scrollbar-thumb {
 
 @keyframes blinkTextCussor{
     from{
-        border-right-color: #212121;
+        border-right-color: #00ff1d;
     }
     to{
         border-right-color: transparent;
@@ -75,7 +79,7 @@ body::-webkit-scrollbar-thumb {
 
 nav {
     width: 100%;
-    background: #fff;
+    background: #0D0D0D;
     height: 80px;
     position: fixed;
     z-index: 1;
@@ -86,11 +90,13 @@ nav #brand{
     display: block;
     margin-left: 82px;
     line-height: 80px;
+    letter-spacing: 0.5px;
     font-weight: bold;
+    font-family: 'ASTERA' !important;
 }
 
 nav #brand a{
-    color: #0D0D0D;
+    color: #00ff1d;
     transition: all 0.3s ease-out;
 }
 
@@ -115,12 +121,12 @@ nav #menu li{
 }
 
 nav #menu li a{
-    color: #0D0D0D;
+    color: #00ff1d;
 }
 
 nav #menu li a:hover{
     text-decoration: none;
-    color: #f7d7e2;
+    color: #fff;
     transition: 0.5s;
 }
 
@@ -155,7 +161,7 @@ nav #menu li a:hover{
     z-index: 1;
     top: 0px;
     position: fixed;
-    background: #fff;
+    background: #0D0D0D;
     width: 100%;
     height: 100%;
     visibility: hidden;
@@ -189,13 +195,13 @@ nav #menu li a:hover{
 }
 
 #resize #menu li a{
-    color: #0D0D0D;
+    color: #00ff1d;
     font-weight: 600;
 }
 
 #resize #menu li a:hover{
     text-decoration: none;
-    color: #f7d7e2;
+    color: #fff;
     transition: 0.5s;
 }
 
@@ -234,8 +240,8 @@ nav #menu li a:hover{
     z-index: 0;
     text-decoration: none;
     text-shadow: 0;
-    border-bottom: 2px solid #0D0D0D;
-    border-right: 2px solid #0D0D0D;
+    border-bottom: 2px solid #00ff1d;
+    border-right: 2px solid #00ff1d;
     transform: translate(-50%, 0) rotate(45deg);
     -webkit-transform: translate(-50%, 0) rotate(45deg);
     animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
@@ -265,7 +271,7 @@ h6{
 .vertical{
     position: absolute;
     margin-top: 40px;
-    border-left: 1px solid #0D0D0D;
+    border-left: 1px solid #00ff1d;
     height: 80px;
     left: 50%;
 }
@@ -282,13 +288,13 @@ h6{
 
 .project1::after {
     content: "FULL BLXXD";
-    font-family: "Rosmatika";
+    font-family: "ASTERA";
     font-size: 36px;
     position: relative;
-    color: #0D0D0D;
+    color: #00ff1d;
     display: block;
     top: 8%;
-    left: -60%;
+    left: -70%;
     right: 0;
     bottom: 0;
 }
@@ -301,10 +307,10 @@ h6{
 
 .project2::after {
     content: "La Lune";
-    font-family: "Rosmatika";
+    font-family: "ASTERA";
     font-size: 36px;
     position: relative;
-    color: #0D0D0D;
+    color: #00ff1d;
     display: block;
     top: 80%;
     left: 110%;
@@ -320,10 +326,10 @@ h6{
 
 .project3::after {
     content: "Sasha";
-    font-family: "Rosmatika";
+    font-family: "ASTERA";
     font-size: 36px;
     position: relative;
-    color: #0D0D0D;
+    color: #00ff1d;
     display: block;
     top: 80%;
     left: -50%;
@@ -339,10 +345,10 @@ h6{
 
 .project4::after {
     content: "Impala";
-    font-family: "Rosmatika";
+    font-family: "ASTERA";
     font-size: 36px;
     position: relative;
-    color: #0D0D0D;
+    color: #00ff1d;
     display: block;
     top: 10%;
     left: 110%;
@@ -350,136 +356,21 @@ h6{
     bottom: 0;
 }
 
-.project9{
-    background: url("../img/09-in-my-head.jpg") no-repeat 50% 50%;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.project9::after {
-    content: "In My Head";
-    font-family: "Rosmatika";
-    font-size: 36px;
-    position: relative;
-    color: #0D0D0D;
-    display: block;
-    top: 8%;
-    left: -60%;
-    right: 0;
-    bottom: 0;
-}
-
-/* --- Work Section --- */
-
-.self-content{
-    margin-left: 0%;
-}
-
-.self-content h3{
-    font-weight: 600 !important;
-    text-align: left;
-}
-
-.self-content h6{
-    text-align: left;
-}
-
-.self-content p{
-    font-weight: 400 !important;
-    line-height: 36px;
-}
-
 .project5{
-    background: url("../img/05-ojcp.jpg") no-repeat 50% 50%;
+    background: url("../img/05-in-my-head.jpg") no-repeat 50% 50%;
     background-size: cover;
     cursor: pointer;
 }
 
 .project5::after {
-    content: "Project Manager";
-    font-family: "Rosmatika";
+    content: "In My Head";
+    font-family: "ASTERA";
     font-size: 36px;
     position: relative;
-    color: #0D0D0D;
+    color: #00ff1d;
     display: block;
     top: 8%;
-    left: -80%;
-    right: 0;
-    bottom: 0;
-}
-
-.project6{
-    background: url("../img/06-wicked-tiger.jpg") no-repeat 50% 50%;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.project6::after {
-    content: "Creative Developer";
-    font-family: "Rosmatika";
-    font-size: 36px;
-    position: relative;
-    color: #0D0D0D;
-    display: block;
-    top: 80%;
-    left: 110%;
-    right: 0;
-    bottom: 0;
-}
-
-.project7{
-    background: url("../img/07-teacher.jpg") no-repeat 50% 50%;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.project7::after {
-    content: "Freelance Teacher";
-    font-family: "Rosmatika";
-    font-size: 36px;
-    position: relative;
-    color: #0D0D0D;
-    display: block;
-    top: 40%;
-    left: -80%;
-    right: 0;
-    bottom: 0;
-}
-
-.project8{
-    background: url("../img/08-croissant.png") no-repeat 50% 50%;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.project8::after {
-    content: "Content Creator";
-    font-family: "Rosmatika";
-    font-size: 36px;
-    position: relative;
-    color: #0D0D0D;
-    display: block;
-    top: 10%;
-    left: 110%;
-    right: 0;
-    bottom: 0;
-}
-
-.project10{
-    background: url("../img/10-ictus-voyages.jpg") no-repeat 50% 50%;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.project10::after {
-    content: "Project Manager & UX/UI Designer";
-    font-family: "Rosmatika";
-    font-size: 36px;
-    position: relative;
-    color: #0D0D0D;
-    display: block;
-    top: 10%;
-    left: 110%;
+    left: -60%;
     right: 0;
     bottom: 0;
 }
@@ -502,17 +393,17 @@ h6{
 }
 
 .contact-view{
-    background: url("../img/equarell.png") no-repeat 50% 50%;
+    background: url("../img/equarell.jpg") no-repeat 50% 50%;
     background-size: cover;
     /* border-radius: 5px; */
 }
 
 .contact-view::after {
-    content: "Good Faith";
-    font-family: "Rosmatika";
+    content: "Black Lives Matter";
+    font-family: "ASTERA";
     font-size: 36px;
     position: relative;
-    color: #0D0D0D;
+    color: #00ff1d;
     display: block;
     top: 8%;
     left: -60%;
@@ -541,7 +432,7 @@ h6{
 }
 
 .particles{
-    background: #f7d7e2;
+    background: #0D0D0D;
 }
 
 .project-info h6{
@@ -556,61 +447,41 @@ h6{
 /* --- Project 1 --- */
 
 .fluid1{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
     background: url(https://images.unsplash.com/photo-1561211974-8a2737b4dcac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) 60% 50%;
 }
 
 /* --- Project 2 --- */
 
 .fluid2{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
     background: url(https://images.unsplash.com/photo-1577138017060-8ed59846a432?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) 10% 70%;
 }
 
 /* --- Project 3 --- */
 
 .fluid3{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
     background: url(https://images.unsplash.com/photo-1564951415682-4466397f7707?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 10% 70%;
 }
 
 /* --- Project 4 --- */
 
 .fluid4{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
     background: url(https://images.unsplash.com/photo-1565638427888-268b7714225e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) 30% 50%;
 }
 
 /* --- Project 5 --- */
 
 .fluid5{
-    background: url(https://images.unsplash.com/photo-1563305145-b64e0c2184aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) 20% 30%;
-}
-
-/* --- Project 6 --- */
-
-.fluid6{
-    background: url(https://images.unsplash.com/photo-1571607050173-323d37e16af4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80) 20% 30%;
-}
-
-/* --- Project 7 --- */
-
-.fluid7{
-    background: url(https://images.unsplash.com/photo-1574281147884-113f7431528e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80) 20% 30%;
-}
-
-/* --- Project 8 --- */
-
-.fluid8{
-    background: url(https://images.unsplash.com/photo-1557264305-7e2764da873b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 20% 40%;
-}
-
-/* --- Project 9 --- */
-
-.fluid9{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
     background: url(https://images.unsplash.com/photo-1583444135062-dea437529fca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 20% 40%;
-}
-
-/* --- Project 10 --- */
-
-.fluid10{
-    background: url(https://images.unsplash.com/photo-1581985283743-abc20b6d8993?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 20% 40%;
 }
 
 /* --- Footer --- */
@@ -625,8 +496,12 @@ h6{
 }
 
 .hr{
-    background: #212121;
+    background: #00ff1d;
     height: 1px;
+}
+
+.info{
+    font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 .info h4{
@@ -635,13 +510,14 @@ h6{
 }
 
 .info p{
-    color: #212121;
+    color: #00ff1d;
+    font-family: 'ASTERA' !important;
     font-weight: 400 !important;
 }
 
 .info li{
     font-weight: 400 !important;
-    color: #0D0D0D;
+    color: #00ff1d;
     font-size: 18px;
 }
 
@@ -660,11 +536,11 @@ h6{
 
 #media ul li a{
     cursor: pointer;
-    color: #0D0D0D;
+    color: #00ff1d;
 }
 
 #media ul li a:hover{
-    color: #f7d7e2;
+    color: #fff;
     transition: 0.5s;
 }
 
@@ -717,7 +593,7 @@ h6{
         display: none;
     }
 
-    .project1::after, .project2::after, .project3::after, .project4::after, .project5::after, .project6::after, .project7::after, .project8::after{
+    .project1::after, .project2::after, .project3::after, .project4::after, .project5::after{
         display: none;
     }
 
