@@ -393,20 +393,20 @@ h6{
 }
 
 .contact-view{
-    background: url("../img/equarell.jpg") no-repeat 50% 50%;
+    background: url("../img/equarell-logo.png") no-repeat 50% 50%;
     background-size: cover;
     /* border-radius: 5px; */
 }
 
 .contact-view::after {
-    content: "2021";
+    content: "create until you can ///";
     font-family: "ASTERA";
     font-size: 36px;
     position: relative;
     color: #00ff1d;
     display: block;
     top: 8%;
-    left: -60%;
+    left: -80%;
     right: 0;
     bottom: 0;
 }
