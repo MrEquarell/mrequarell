@@ -6,7 +6,6 @@
 	src:url('../font/ASTERA.ttf') format('truetype'),
 }
 
-
 /* --- Main --- */
 
 html, body{
@@ -17,7 +16,9 @@ html, body{
     font-family: 'ASTERA' !important;
     /* font-family: 'Source Sans Pro', sans-serif !important; */
     letter-spacing: 0.5px;
-    background: #0D0D0D !important;
+    /* background: #0D0D0D !important; */
+    background: url("../img/reflector_haven.jpg") no-repeat;
+    background-size: cover;
     color: #00ff1d !important;
 }
 
@@ -79,7 +80,7 @@ body::-webkit-scrollbar-thumb {
 
 nav {
     width: 100%;
-    background: #0D0D0D;
+    /* background: #0D0D0D; */
     height: 80px;
     position: fixed;
     z-index: 1;
