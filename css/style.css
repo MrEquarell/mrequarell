@@ -17,9 +17,9 @@ html, body{
     /* font-family: 'Source Sans Pro', sans-serif !important; */
     letter-spacing: 0.5px;
     /* background: #0D0D0D !important; */
-    background: url("../img/reflector_haven.jpg") no-repeat;
-    background-size: cover;
-    color: #00ff1d !important;
+    background: url("../img/EVIL-EGX-Background.jpg") no-repeat;
+    background-size: auto;
+    color: #ffffff !important;
 }
 
 body::-webkit-scrollbar {
@@ -31,7 +31,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #00ff1d;
+    background: #ffffff;
 }
 
 .whitespace{
@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb {
     width: 24em;
     top: 50;
     margin: auto;
-    border-right: 2px solid #00ff1d;
+    border-right: 2px solid #ffffff;
     letter-spacing: 0.5px !important;
     text-align: center;
     white-space: nowrap;
@@ -69,7 +69,7 @@ body::-webkit-scrollbar-thumb {
 
 @keyframes blinkTextCussor{
     from{
-        border-right-color: #00ff1d;
+        border-right-color: #ffffff;
     }
     to{
         border-right-color: transparent;
@@ -97,7 +97,7 @@ nav #brand{
 }
 
 nav #brand a{
-    color: #00ff1d;
+    color: #ffffff;
     transition: all 0.3s ease-out;
 }
 
@@ -122,12 +122,12 @@ nav #menu li{
 }
 
 nav #menu li a{
-    color: #00ff1d;
+    color: #ffffff;
 }
 
 nav #menu li a:hover{
     text-decoration: none;
-    color: #fff;
+    color: #FE3400;
     transition: 0.5s;
 }
 
@@ -196,13 +196,13 @@ nav #menu li a:hover{
 }
 
 #resize #menu li a{
-    color: #00ff1d;
+    color: #ffffff;
     font-weight: 600;
 }
 
 #resize #menu li a:hover{
     text-decoration: none;
-    color: #fff;
+    color: #FE3400;
     transition: 0.5s;
 }
 
@@ -241,8 +241,8 @@ nav #menu li a:hover{
     z-index: 0;
     text-decoration: none;
     text-shadow: 0;
-    border-bottom: 2px solid #00ff1d;
-    border-right: 2px solid #00ff1d;
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
     transform: translate(-50%, 0) rotate(45deg);
     -webkit-transform: translate(-50%, 0) rotate(45deg);
     animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
@@ -272,7 +272,7 @@ h6{
 .vertical{
     position: absolute;
     margin-top: 40px;
-    border-left: 1px solid #00ff1d;
+    border-left: 1px solid #ffffff;
     height: 80px;
     left: 50%;
 }
@@ -292,7 +292,7 @@ h6{
     font-family: "ASTERA";
     font-size: 36px;
     position: relative;
-    color: #00ff1d;
+    color: #ffffff;
     display: block;
     top: 8%;
     left: -70%;
@@ -311,7 +311,7 @@ h6{
     font-family: "ASTERA";
     font-size: 36px;
     position: relative;
-    color: #00ff1d;
+    color: #ffffff;
     display: block;
     top: 80%;
     left: 110%;
@@ -330,7 +330,7 @@ h6{
     font-family: "ASTERA";
     font-size: 36px;
     position: relative;
-    color: #00ff1d;
+    color: #ffffff;
     display: block;
     top: 80%;
     left: -50%;
@@ -349,7 +349,7 @@ h6{
     font-family: "ASTERA";
     font-size: 36px;
     position: relative;
-    color: #00ff1d;
+    color: #ffffff;
     display: block;
     top: 10%;
     left: 110%;
@@ -368,7 +368,7 @@ h6{
     font-family: "ASTERA";
     font-size: 36px;
     position: relative;
-    color: #00ff1d;
+    color: #ffffff;
     display: block;
     top: 8%;
     left: -60%;
@@ -404,7 +404,7 @@ h6{
     font-family: "ASTERA";
     font-size: 36px;
     position: relative;
-    color: #00ff1d;
+    color: #ffffff;
     display: block;
     top: 8%;
     left: -80%;
@@ -497,7 +497,7 @@ h6{
 }
 
 .hr{
-    background: #00ff1d;
+    background: #ffffff;
     height: 1px;
 }
 
@@ -511,14 +511,14 @@ h6{
 }
 
 .info p{
-    color: #00ff1d;
+    color: #ffffff;
     font-family: 'ASTERA' !important;
     font-weight: 400 !important;
 }
 
 .info li{
     font-weight: 400 !important;
-    color: #00ff1d;
+    color: #ffffff;
     font-size: 18px;
 }
 
@@ -537,11 +537,11 @@ h6{
 
 #media ul li a{
     cursor: pointer;
-    color: #00ff1d;
+    color: #ffffff;
 }
 
 #media ul li a:hover{
-    color: #fff;
+    color: #FE3400;
     transition: 0.5s;
 }
 
